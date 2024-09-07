@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生インターン離職防止・採用支援ツール</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>学生インターン離職防止・採用支援ツール</h1>
+        <form id="candidateForm">
+            <h2>EQスコア</h2>
+            <div class="eq-scores">
+                <input type="number" id="selfAwareness" placeholder="自己認識" required>
+                <input type="number" id="selfManagement" placeholder="自己管理" required>
+                <input type="number" id="socialAwareness" placeholder="社会的認識" required>
+                <input type="number" id="relationshipManagement" placeholder="関係管理" required>
+            </div>
+            <h2>面接回答</h2>
+            <textarea id="interviewResponses" rows="5" placeholder="面接での回答を入力してください（複数の回答は改行で区切ってください）" required></textarea>
+            <button type="submit">分析</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>分析結果</h2>
+            <p>適性予測: <span id="prediction"></span></p>
+            <p>適性確率: <span id="probability"></span></p>
+            <h3>感情分析結果</h3>
+            <p>ポジティブ感情比率: <span id="positiveRatio"></span></p>
+            <p>ネガティブ感情比率: <span id="negativeRatio"></span></p>
+            <p>感情変動性: <span id="sentimentVolatility"></span></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
